@@ -1,13 +1,14 @@
 package application;
 
-import boardGame.Position;
+import boardGame.Board; 
+import chess.XadrezPartida;
 
 public class Program {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Position pos = new Position(3,5);
-		System.out.println(pos);
+		XadrezPartida xadrezPartida = new XadrezPartida();
+		UI.imprimirBoard(xadrezPartida.getPecas());
 	}
 
 }
