@@ -1,6 +1,9 @@
 package chess;
 
 import boardGame.Board;
+import boardGame.Position;
+import chess.pieces.Rei;
+import chess.pieces.Torre;
 
 public class XadrezPartida {
 
@@ -8,6 +11,7 @@ public class XadrezPartida {
 	
 	public XadrezPartida() {
 		board = new Board(8,8);
+		setupInicial();
 	}
 	
 	
@@ -20,4 +24,9 @@ public class XadrezPartida {
 		}
 		return mat;
 	}
+	private void setupInicial() {
+		board.colocarPeca(new Torre(board,Color.BRANCO), new Position(2,1));
+		board.colocarPeca(new Rei(board, Color.PRETO), new Position(0,4));
+		board.colocarPeca(new Rei(board, Color.BRANCO), new Position(7,4));
+	};
 } 
